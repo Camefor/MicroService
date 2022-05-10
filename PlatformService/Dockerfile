@@ -1,4 +1,4 @@
-##See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+ï»¿##See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 #
 ##Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
 ##For more information, please see https://aka.ms/containercompat
@@ -24,7 +24,7 @@
 #COPY --from=publish /app/publish .
 #ENTRYPOINT ["dotnet", "PlatformService.dll"]
 
-#ÔÚ½ÌÑ§ÊÓÆµµÄ2:25:00´¦
+#åœ¨æ•™å­¦è§†é¢‘çš„2:25:00å¤„
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
 WORKDIR /app
@@ -43,12 +43,13 @@ ENTRYPOINT [ "dotnet", "PlatformService.dll" ]
 
 
 
-#¹¹½¨¾µÏñÎÄ¼şÃüÁî£ºdocker build -t xuehaq/platformservice .
+#æ„å»ºé•œåƒæ–‡ä»¶å‘½ä»¤ï¼šdocker build -t xuehaq/platformservice .
 
-#ÔËĞĞÃüÁî£º docker run -p 8080:80 -d xuehaq/platformservice
-
-
-#²é¿´ÕıÔÚÔËĞĞµÄÈİÆ÷£º docker ps
+#è¿è¡Œå‘½ä»¤ï¼š docker run -p 8080:80 -d xuehaq/platformservice
 
 
-#docker pushÃüÁî£º docker push xuehaq/platformservice
+#æŸ¥çœ‹æ­£åœ¨è¿è¡Œçš„å®¹å™¨ï¼š docker ps
+#å¼€å§‹/åœæ­¢è¿è¡Œï¼š docker start/stop [id]
+
+
+#docker pushå‘½ä»¤ï¼š docker push xuehaq/platformservice

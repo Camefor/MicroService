@@ -2,17 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>37e2c5fd-87c6-4f0b-82a1-b8f61565eed1</UserSecretsId>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <!--https://stackoverflow.com/questions/46779911/asp-net-core-docker-build-error-->
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Controllers - Copy\**" />
-    <Content Remove="Controllers - Copy\**" />
-    <EmbeddedResource Remove="Controllers - Copy\**" />
-    <None Remove="Controllers - Copy\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
@@ -21,10 +11,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
 </Project>
